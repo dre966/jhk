@@ -1,0 +1,253 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Concert+One&family=Oleo+Script:wght@400;700&family=Oxanium:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", sans-serif;
+}
+
+/* Navigation Bar */
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  top: -12px;
+}
+
+.logo img {
+  position: relative;
+  top: 15px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #7ad0f8; /* Change to your desired hover color */
+}
+
+.menu li a::after {
+  content: "";
+  display: flex;
+  width: 0;
+  height: 2px;
+  background: #7ad0f8; /* Match the hover color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 28px;
+  color: #fff;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    flex-direction: column; /* Flex direction row */
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .menu li a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .hamburger i {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Banner and Section Styles */
+.banner {
+  height: 100vh;
+  width: 100%;
+  padding-top: 60px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/about1.png);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.parallax {
+  background-attachment: fixed;
+}
+
+.banner .info {
+  text-align: center;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  font-family: "Oxanium", sans-serif;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: calc(16px + 1vw); /* Adjust font size based on viewport width */
+}
+
+/* Section Content Styles */
+.sec1 h1, .sec2 h1, .sec3 h1, .sec4 h1, .sec5 h1, .sec6 h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.sec1, .sec3, .sec5 {
+  text-align: center;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 1vw); /* Adjust font size based on viewport width */
+  font-family: "Oxanium", sans-serif;
+  text-transform: uppercase;
+}
+
+.sec2, .sec4, .sec6 {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: calc(12px + 1vw); /* Adjust font size based on viewport width */
+  font-family: "Oxanium", sans-serif;
+}
+
+.sec2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/about2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.sec4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/about3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.sec6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Assets/about4.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax {
+  background-attachment: fixed;
+}
+
+/* Animations */
+@keyframes fadeInRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-rise.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Text Adjustments */
+@media (max-width: 768px) {
+  .sec1, .sec3, .sec5 {
+    font-size: calc(10px + 1vw); /* Adjust font size for smaller screens */
+  }
+
+  .sec2, .sec4, .sec6 {
+    font-size: calc(20px + 1vw); /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sec1, .sec3, .sec5 {
+    font-size: calc(10px + 1vw); /* Adjust font size for smaller screens */
+  }
+
+  .sec2, .sec4, .sec6 {
+    font-size: calc(10px + 1vw); /* Adjust font size for smaller screens */
+  }
+}

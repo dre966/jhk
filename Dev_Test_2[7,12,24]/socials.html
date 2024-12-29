@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Socials</title>
+    
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="socials.css" />
+    
+    <!-- FontAwesome for Hamburger Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="logo">
+                <img src="Assets/Log_Header.png" width="50px" height="auto" alt="Blizz Media™ Logo">
+                Blizz Media™
+            </div>
+            <!-- Hamburger Menu -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="socials.html">Our Socials</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section with Swiper -->
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <!-- Instagram Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/Insta_Backdrop.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/insta_logo.png" width="150" alt="Instagram Logo">
+                    <h2>
+                        Experience Blizz™ <br /> on Instagram!
+                    </h2>
+                    <a href="https://www.instagram.com/blizz_media_gh/" target="_blank" class="button">Follow Us</a>
+                </div>
+            </div>
+            <!-- YouTube Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/utubeback.png" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/utubelogo.png" width="300" alt="YouTube Logo">
+                    <h2>
+                        Watch Blizz™ <br /> on YouTube
+                    </h2>
+                    <a href="http://www.youtube.com/@BLIZZMEDIA-w9d" target="_blank" class="button">Watch</a>
+                </div>
+            </div>
+            <!-- X (formerly Twitter) Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/xback.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/xlogo.png" width="300" alt="X Logo">
+                    <h2>
+                        Experience Blizz™ <br /> on X!
+                    </h2>
+                    <a href="https://x.com/blizzmedia_gh" target="_blank" class="button">Follow Us</a>
+                </div>
+            </div>
+            <!-- TikTok Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/tiktok_backdrop.png" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/tick_logo-removebg-preview.png" width="150" alt="TikTok Logo">
+                    <h2>
+                        Vibe with Blizz™ <br /> on TikTok
+                    </h2>
+                    <a href="#" target="_blank" class="button">Watch On TikTok</a>
+                </div>
+            </div>
+            <!-- Telegram Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/telegram_backdrop.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/tele_log.png" width="150" alt="Telegram Logo">
+                    <h2>
+                        Connect with Blizz™<br /> on Telegram!
+                    </h2>
+                    <a href="https:t.me/BLIZZMED" target="_blank" class="button">Connect</a>
+                </div>
+            </div>
+            <!-- WhatsApp Slide -->
+            <div class="slide swiper-slide">
+                <img src="Assets/whatsapp_backdrop.png" alt="" class="image" />
+                <div class="image-data">
+                    <img src="Assets/whatsapp_logo.png" width="200" alt="WhatsApp Logo">
+                    <h2>
+                        Join Us On WhatsApp
+                    </h2>
+                    <a href="#" class="button">Join Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
